@@ -17,6 +17,7 @@ struct BookMyStayApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //ExploreView()
         }
     }
 }

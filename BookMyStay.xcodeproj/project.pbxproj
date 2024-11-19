@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D291DD482CDE6C0500893191 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D291DD472CDE6C0500893191 /* FirebaseAuth */; };
+		D291DD4A2CDE6C0500893191 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D291DD492CDE6C0500893191 /* FirebaseDatabase */; };
+		D291DD4C2CDE6C0500893191 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D291DD4B2CDE6C0500893191 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D2D8E5672CDE108500A561E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +35,30 @@
 		D2D8E5702CDE108600A561E7 /* BookMyStayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookMyStayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D291DD532CDE751400893191 /* Exceptions for "BookMyStay" folder in "BookMyStayTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = D2D8E5652CDE108500A561E7 /* BookMyStayTests */;
+		};
+		D291DD542CDE751400893191 /* Exceptions for "BookMyStay" folder in "BookMyStayUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = D2D8E56F2CDE108600A561E7 /* BookMyStayUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D2D8E5582CDE108200A561E7 /* BookMyStay */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D291DD532CDE751400893191 /* Exceptions for "BookMyStay" folder in "BookMyStayTests" target */,
+				D291DD542CDE751400893191 /* Exceptions for "BookMyStay" folder in "BookMyStayUITests" target */,
+			);
 			path = BookMyStay;
 			sourceTree = "<group>";
 		};
@@ -52,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D291DD4A2CDE6C0500893191 /* FirebaseDatabase in Frameworks */,
+				D291DD482CDE6C0500893191 /* FirebaseAuth in Frameworks */,
+				D291DD4C2CDE6C0500893191 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +142,9 @@
 			);
 			name = BookMyStay;
 			packageProductDependencies = (
+				D291DD472CDE6C0500893191 /* FirebaseAuth */,
+				D291DD492CDE6C0500893191 /* FirebaseDatabase */,
+				D291DD4B2CDE6C0500893191 /* FirebaseFirestore */,
 			);
 			productName = BookMyStay;
 			productReference = D2D8E5562CDE108200A561E7 /* BookMyStay.app */;
@@ -195,6 +228,9 @@
 			);
 			mainGroup = D2D8E54D2CDE108200A561E7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D291DD462CDE6C0500893191 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D2D8E5572CDE108200A561E7 /* Products */;
 			projectDirPath = "";
@@ -398,6 +434,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BookMyStay/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BookMyStay;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +464,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BookMyStay/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BookMyStay;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +592,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D291DD462CDE6C0500893191 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D291DD472CDE6C0500893191 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D291DD462CDE6C0500893191 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D291DD492CDE6C0500893191 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D291DD462CDE6C0500893191 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D291DD4B2CDE6C0500893191 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D291DD462CDE6C0500893191 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2D8E54E2CDE108200A561E7 /* Project object */;
 }

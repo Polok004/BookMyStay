@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct ListingImage: View {
+    
+    var images = [
+        "Hotel1",
+        "Hotel2",
+        "Hotel3",
+        "Hotel4",
+        "Hotel5",
+        "Hotel6",
+        "Hotel7",
+        
+    ]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        TabView{
+            ForEach(images,id: \.self) { image in
+                Image(image)
+                    .resizable()
+                    .scaledToFill()
+            }
+        }
+       
+        .tabViewStyle(.page)
+        //listing details
     }
 }
 
